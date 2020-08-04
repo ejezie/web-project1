@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'vollkorn', 'serif';
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --primary-color: #9b0404;
+    --secondary-color: #eee;
+    --white-color: #fff;
+    --black-color: rgb(0, 0, 0);
+    --light-grey-color: #777;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.container{
+    background-color: var(--black-color);
+    margin: 1.5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 55rem;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.logo h1{
+    display: flex;
+}
+
+.logo h1 span:nth-child(1){
+    animation: moving-letters 2.1s 0.1s infinite;
+}
+
+.logo h1 span:nth-child(2){
+    animation: moving-letters 2.1s 0.3s infinite;
+}
+
+.logo h1 span:nth-child(3){
+    animation: moving-letters 2.1s 0.5s infinite;
+}
+
+.logo h1 span:nth-child(4){
+    animation: moving-letters 2.1s 0.7s infinite;
+}
+
+.logo h1 span:nth-child(5){
+    animation: moving-letters 2.1s 0.9s infinite;
+}
+
+.logo h1 span:nth-child(6){
+    animation: moving-letters 2.1s 1.1s infinite;
+}
+
+.logo h1 span:nth-child(7){
+    animation: moving-letters 2.1s 1.3s infinite;
+}
+
+.logo h1 span:nth-child(8){
+    animation: moving-letters 2.1s 0.1s infinite;
+}
+
+.logo h1 span:nth-child(9){
+    animation: moving-letters 2.1s 1.5s infinite;
+}
+
+.logo h1 span:nth-child(10){
+    animation: moving-letters 2.1s 1.7s infinite;
+}
+
+.logo h1 span:nth-child(11){
+    animation: moving-letters 2.1s 1.9s infinite;
+}
+
+.logo h1 span:nth-child(12){
+    animation: moving-letters 2.1s 2.1s infinite;
+}
+
+@keyframes moving-letters{
+    0%{
+        transform: translateZ(0);
+    }
+    50%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateZ(0);
+    }
+}
+
+.logo h1 span{
+    background-color: rgb(206, 85, 41);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 1.7rem;
+    text-align: center;
+    margin-left: 0.5rem;
+    font-weight: 900;
+    color: var(--white-color);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.big-card-wrapper{
+    display: flex; 
+    background-color:var(--black-color);
+    margin: 2rem;
+    flex-direction: column;
+    width: 35%;
+    height: 50rem;
+    border-radius: 2rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+}
+
+.big-card-video{
+    height: 80%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.big-card-heading{
+    color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.big-card-logo{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 0.8;
+    border-radius: 2rem;
+}
+
+.food-item{
+    margin: 0.1rem;
+}
+
+.small-cards-wrapper{
+    display: flex;
+    justify-content: unset;
+    margin: auto;
+    position: relative;
+}
+
+.my-image{
+    position: absolute;
+    top: 4rem;
+    left: 47%;
+    border-radius: 50%;
+}
+
+.my-text{
+    color: var(--white-color);
+    position: absolute;
+    top: 10rem;
+    left: 47%;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.small-card{
+    position: relative;
+    bottom: 15rem;
+    right: 15rem;
+}
+
+.small-card-one{
+    position: relative;
+    top: 6.5rem;
+    right: 15rem;
+}
+
+.small-card-two{
+    position: relative;
+    bottom: 22rem;
+    left: 5rem;
+}
+
+.small-card-three{
+    position: relative;
+    top: 0rem;
+    left: 5rem;
+}
+
+.small-card-front{
+    z-index: 10;
+    position: absolute;
+    height: 20rem;
+    width: 15rem;
+}
+
+.change > .small-card-front{
+    position: absolute;
+    height: 20rem;
+    width: 15rem;  
+    transition: all 1s;
+}
+
+.small-card-back{
+    position: absolute;
+    height: 20rem;
+    width: 15rem;
+    transition: opacity 0.9s, transform 0.9s, box-shadow 0.9s;
+}
+
+.change > .small-card-back{
+    z-index: 10;
+    position: absolute;
+    height: 20rem;
+    width: 15rem;
+}
+
+.small-card-front .card-image{
+    border-radius: 1rem;
+    height: 20rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.small-card-back .card-image{
+    border-radius: 1rem;
+    height: 20rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+.navigation-button{
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    background-color:  rgb(206, 85, 41);
+}
+
+.small-card-text{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: .5rem;
+    text-align: center;
+    padding: .15rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 900;  
+}
+
+.order-button{
+    position: absolute;
+    top: 90%;
+    left: 76%;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background-color: rgb(223, 70, 15);
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--secondary-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.1rem;
+}
