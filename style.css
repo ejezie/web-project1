@@ -9,11 +9,13 @@
 }
 
 :root{
-    --primary-color: #9b0404;
+    --primaryColor: #f09d51;
     --secondary-color: #eee;
+    --red-color: #9b0404;
     --white-color: #fff;
     --black-color: rgb(0, 0, 0);
     --light-grey-color: #777;
+    --mainTransition: all 0.3s linear;
 }
 
 .center{
@@ -24,25 +26,22 @@
 
 body{
     background-color: rgb(255, 255, 255, 0.9);
+    overflow-x: hidden;
 }
 
-.container{
-    background-color: var(--black-color);
-    margin: 1.5rem;
-    overflow: hidden;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    height: 55rem;
-    position: relative;
+.nav-bar{
+    height: 3rem;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
 }
 
 .logo{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .logo h1{
@@ -110,7 +109,7 @@ body{
 }
 
 .logo h1 span{
-    background-color: rgb(206, 85, 41);
+    background-color: var(--primaryColor);
     border-radius: 50%;
     font-size: 1.5rem;
     width: 1.7rem;
@@ -121,40 +120,36 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.big-card-wrapper{
+.header{
     display: flex; 
     background-color:var(--black-color);
-    margin: 2rem;
     flex-direction: column;
-    width: 35%;
-    height: 50rem;
-    border-radius: 2rem;
-    position: absolute;
-    top: 2rem;
-    left: 1rem;
+    min-height: calc(100vh-3rem);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
 }
 
-.big-card-video{
-    height: 80%;
+.header-video{
     object-fit: cover;
-    border-radius: 2rem;
+    height: 100%;
 }
 
-.big-card-heading{
+.header-heading{
     color: var(--white-color);
-    position: absolute;
-    top: 50%;
-    left: 25%;
     font-size: 1rem;
     font-style: italic;
+    position: absolute;
+    bottom: 20%;
 }
 
-.big-card-logo{
-    height: 15rem;
-    width: 15rem;
+
+.header-logo{
     position: absolute;
-    top: 20%;
-    left: 20%;
+    top: 30%;
+    height: 30rem;
+    width: 30rem;
     opacity: 0.8;
     border-radius: 2rem;
 }
@@ -163,89 +158,43 @@ body{
     margin: 0.1rem;
 }
 
+.food-item-header{
+    background-color: var(--white-color);
+    font-size: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
 .small-cards-wrapper{
-    display: flex;
-    justify-content: unset;
-    margin: auto;
-    position: relative;
-}
-
-.my-image{
-    position: absolute;
-    top: 4rem;
-    left: 47%;
-    border-radius: 50%;
-}
-
-.my-text{
-    color: var(--white-color);
-    position: absolute;
-    top: 10rem;
-    left: 47%;
-    font-size: 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
 }
 
 .small-card{
-    position: relative;
-    bottom: 15rem;
-    right: 15rem;
-}
-
-.small-card-one{
-    position: relative;
-    top: 6.5rem;
-    right: 15rem;
-}
-
-.small-card-two{
-    position: relative;
-    bottom: 22rem;
-    left: 5rem;
-}
-
-.small-card-three{
-    position: relative;
-    top: 0rem;
-    left: 5rem;
+    margin: 2rem 0 0 0;
 }
 
 .small-card-front{
     z-index: 10;
-    position: absolute;
+    position: relative;
     height: 20rem;
     width: 15rem;
 }
 
-.change > .small-card-front{
-    position: absolute;
-    height: 20rem;
-    width: 15rem;  
-    transition: all 1s;
-}
-
 .small-card-back{
-    position: absolute;
+    position: relative;
     height: 20rem;
     width: 15rem;
     transition: opacity 0.9s, transform 0.9s, box-shadow 0.9s;
 }
 
-.change > .small-card-back{
-    z-index: 10;
-    position: absolute;
-    height: 20rem;
-    width: 15rem;
-}
-
 .small-card-front .card-image{
-    border-radius: 1rem;
-    height: 20rem;
-    width: 15rem;
-    object-fit: cover;
-}
-
-.small-card-back .card-image{
+    position: absolute;
     border-radius: 1rem;
     height: 20rem;
     width: 15rem;
@@ -261,12 +210,12 @@ body{
     border-radius: 0.2rem;
     padding: 0.2rem;
     cursor: pointer;
-    background-color:  rgb(206, 85, 41);
+    background-color:  var(--primaryColor);
 }
 
 .small-card-text{
     color: var(--secondary-color);
-    background-color: var(--primary-color);
+    background-color: var(--red-color);
     border-radius: .5rem;
     text-align: center;
     padding: .15rem;
@@ -280,15 +229,39 @@ body{
 }
 
 .order-button{
-    position: absolute;
-    top: 90%;
-    left: 76%;
     font-size: 1.5rem;
     border-radius: .5rem;
-    background-color: rgb(223, 70, 15);
+    background-color: var(--primaryColor);
     cursor: pointer;
     padding: 0.5rem;
     color: var(--secondary-color);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.1rem;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.footer{
+    background-color: var(--light-grey-color);
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.my-image{
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.my-text{
+    color: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    left: 89%;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
