@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -102,21 +102,57 @@
                         <button class="navigation-button">ORDER NOW</button>
                     </div>
                 </article>
-
             </div>
+              
+        </section>
+        
+
+        <section class="form">
             <div class="button-wrapper">
                 <button class="order-button">ORDER NOW</button>
             </div>
-            <div class="form">
-                <form action=""></form>
+            <div class="form-wrapper">
+                <div class="cancel-button">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="input-group">
+                        <label>Full name</label>
+                        <input type="text" class="contact-input" placeholder="input your name" >
+                    </div>
+                    <div class="input-groups">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" class="contact-input" placeholder="input your email" >
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" class="contact-input" placeholder="input your Phone No" >
+                        </div>
+
+                    </div>
+                        <div class="input-group">
+                            <label>Message</label>
+                            <textarea class="form-textarea" placeholder="Your text here"></textarea>
+                            <input type="submit" value="Submit" class="form-btn">
+                        </div>
+                    </div>
+                </form>
+                
             </div>
         </section>
         <footer class="footer">
+            <div class="cancel-button">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+            </div>
             About us
             <img class="my-image" src="doris/IMG.png" alt="author-image">
             <h1 class="my-text">Ejezie Doris</h1>
         </footer>
-   
     <script src="script.js"></script>
 </body>
 </html>
