@@ -264,6 +264,7 @@ body{
 
 .form{
    padding: 0.1rem;
+   position: relative;
 }
 
 .form-wrapper{
@@ -326,7 +327,7 @@ body{
 
 .cancel-button{
     position: absolute;
-    top: 0;
+    top: 80%;
     left: 0;
     height: 3rem;
     width: 3rem;
