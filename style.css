@@ -9,7 +9,7 @@
 }
 
 :root{
-    --primaryColor: #f09d51;
+    --primaryColor: #f34418;
     --secondary-color: #eee;
     --red-color: #9b0404;
     --white-color: #fff;
@@ -120,34 +120,32 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.header{
-    display: flex; 
-    background-color:var(--black-color);
-    flex-direction: column;
-    min-height: calc(100vh-3rem);
+.header-wrapper{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center; 
+    background-color:var(--black-color);
+    min-height: calc(100vh-3rem);
     position: relative;
 }
 
 .header-video{
     object-fit: cover;
     height: 100%;
+    
 }
 
 .header-heading{
+    position: absolute;
     color: var(--white-color);
     font-size: 1rem;
     font-style: italic;
-    position: absolute;
-    bottom: 20%;
+    
 }
 
 
 .header-logo{
     position: absolute;
-    top: 30%;
     height: 30rem;
     width: 30rem;
     opacity: 0.8;
@@ -176,41 +174,49 @@ body{
 }
 
 .small-card{
-    margin: 2rem 0 0 0;
+    position: relative;
+    padding: 0.1;
 }
 
-.small-card-front{
-    z-index: 10;
+.image-container{
     position: relative;
     height: 20rem;
     width: 15rem;
 }
 
-.small-card-back{
-    position: relative;
-    height: 20rem;
-    width: 15rem;
-    transition: opacity 0.9s, transform 0.9s, box-shadow 0.9s;
-}
-
-.small-card-front .card-image{
+.small-card .card-image{
     position: absolute;
     border-radius: 1rem;
     height: 20rem;
     width: 15rem;
     object-fit: cover;
+    transition: all 1s;
 }
 
 .navigation-button{
     position: absolute;
-    top: 0rem;
+    top: 0;
     left: 0;
     font-size: 1rem;
     border: none;
-    border-radius: 0.2rem;
-    padding: 0.2rem;
+    border-radius: 0.5rem 0rem 0.5rem 0;
+    padding: 0.5rem;
     cursor: pointer;
     background-color:  var(--primaryColor);
+    font-weight: bold;
+    transition: var(--mainTransition);
+    transform: translateX(10%);
+    z-index: -1;
+    color: var(--white-color);
+}
+
+.image-container:hover .navigation-button{
+    transform: translateX(0);
+    z-index: 0;
+}
+
+.image-container:hover .card-image{
+   opacity: 0.8;
 }
 
 .small-card-text{
@@ -228,6 +234,13 @@ body{
     font-weight: 900;  
 }
 
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .order-button{
     font-size: 1.5rem;
     border-radius: .5rem;
@@ -237,6 +250,7 @@ body{
     color: var(--secondary-color);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 0.1rem;
+    border: 0.1rem;
     margin: 1.5rem 0 1.5rem 0;
 }
 
