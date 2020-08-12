@@ -475,6 +475,8 @@ p{
 
     .contact-form{
         padding: 5rem;
+        bottom: 15%;
+        left: 2%;
     }
 
     .logo h1 span{
@@ -482,19 +484,19 @@ p{
     }
 
     .footer{
-        min-width: 400px;
+        min-width: 360px;
     }
 
     .food-items{
-        min-width: 400px;
+        min-width: 360px;
     }
 
     .header-wrapper{
-        min-width: 400px;
+        min-width: 360px;
     }
 
     .food-item-header{
-        min-width: 400px;
+        min-width: 360px;
     }
 
     .header-logo{
@@ -516,6 +518,8 @@ p{
     }
 }
 
+    
+
 @media (max-width:350px)
 {
     .order-button{
@@ -527,6 +531,26 @@ p{
         width: 20rem;
     }
 
+    
+    .logo h1 span{
+        width: 1.1rem;
+    }
+
+    .footer{
+        min-width: 350px;
+    }
+
+    .food-items{
+        min-width: 350px;
+    }
+
+    .header-wrapper{
+        min-width: 350px;
+    }
+
+    .food-item-header{
+        min-width: 350px;
+    }
     
 }
 
