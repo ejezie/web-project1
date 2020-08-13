@@ -279,6 +279,8 @@ body{
     padding: 8rem;
     border-radius: 2rem;
     opacity: 0.7;
+    width: 30rem;
+    height: 25rem;
 }
 
 .select-wrapper{
@@ -294,7 +296,7 @@ body{
     font-size: 1rem;
     color: var(--white-color);
     width: 15rem;
-    border-radius: .5rem;
+    border-radius: 2rem;
 }
 
 .select-label{
@@ -306,10 +308,74 @@ body{
    font-weight: bold;
 }
 
-.form-image{
+.input-group1{
     position: absolute;
-    height: 10rem;
-    width: 100%;
+    color: var(--white-color);
+    font-weight: bold;
+    left: 10%;
+    top: 30%;
+}
+
+.input-group2{
+    position: absolute;
+    color: var(--white-color);
+    font-weight: bold;
+    left: 10%;
+    top: 47.5%;
+}
+
+.contact-input1{
+    position: absolute;
+    left: 5.4rem;
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem;
+}
+
+.contact-input2{
+    position: absolute;
+    left: 5.4rem;
+    background-color: var(--red-color);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem;
+}
+
+.input-group-text{
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.input-group-text label{
+    position: absolute;
+    left: 0;
+}
+
+.form-textarea{
+    position: absolute;
+    top: -1rem;
+    left: 5rem;
+    background-color: var(--red-color);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    max-width: 17rem;
+    min-width: 16rem;
+    max-height: 4rem;
+    min-height: 3rem;
+}
+
+.form-btn{
+    position: absolute;
+    top: 3.4rem;
+    left: 11rem;
+    border-radius: 2rem;
+    background-color: var(--red-color);
+    padding: 0.3rem;
+    cursor: pointer;
 }
 
 .button-wrapper{
@@ -397,6 +463,8 @@ p{
     position: absolute;
     color: var(--white-color);
 }
+
+/* Media */
 
 @media (max-width: 1020px){
     .image-container{
@@ -514,10 +582,21 @@ p{
 
      .contact-form{
         padding: 6rem;
-        margin-right: 1rem;
+        margin-right: 3.5rem;
+        top: -12rem;
+    }
+
+    .form-textarea{
+        min-width: 14rem;
+    }
+
+    .select{
+        width: 13rem;
+    }
+    .cancel-button{
+        left: 19rem;
     }
 }
-
     
 
 @media (max-width:350px)
@@ -537,19 +616,19 @@ p{
     }
 
     .footer{
-        min-width: 350px;
+        min-width: 300px;
     }
 
     .food-items{
-        min-width: 350px;
+        min-width: 300px;
     }
 
     .header-wrapper{
-        min-width: 350px;
+        min-width: 300px;
     }
 
     .food-item-header{
-        min-width: 350px;
+        min-width: 300px;
     }
     
 }
