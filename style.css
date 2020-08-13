@@ -471,10 +471,10 @@ p{
         margin-bottom: 1rem;
     }
     .small-cards-wrapper1{
-        flex-direction: column;
+        display: none;
     }
     .small-cards-wrapper2{
-        display: none;
+        flex-direction: column;
     }
     .small-cards-wrapper3{
         flex-direction: column;
